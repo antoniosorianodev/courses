@@ -40,9 +40,14 @@ function buildRow(someTableBody, someData) {
     courseNumberCell.innerHTML = someData.courseNum;
 
     // create the cell for the course name
-    let courseName = row.insertCell();
+    let courseNameCell = row.insertCell();
     // put the releveant course data in the 
-    courseName.innerHTML = someData.courseName;
+    courseNameCell.innerHTML = someData.courseName;
+
+    // create the cell for the course name
+    let courseDetailsCell = row.insertCell();
+    // put the releveant course data in the 
+    courseDetailsCell.innerHTML = `<a href="./details.html?courseId=${someData.id}">Show Details</a>`;
 }
 
 async function getCourses() {
